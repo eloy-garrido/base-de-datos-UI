@@ -9,6 +9,7 @@ Crear una ventana simple que muestre "CONECTADO" o "NO CONECTADO" con colores ve
 - ✅ Nivel 0 completado (Python instalado)
 - ✅ Nivel 1 completado (MySQL funcionando)
 - ✅ Nivel 2 completado (test de consola funcionando)
+- 🔧 **IMPORTANTE**: Completar el Paso 0 de este nivel (instalar librerías)
 
 ---
 
@@ -26,6 +27,56 @@ Una ventana simple que:
 - Si funciona: fondo verde, texto "CONECTADO"
 - Si no funciona: fondo rojo, texto "NO CONECTADO"
 - Un botón para cerrar
+
+---
+
+## 🔧 Paso 0: Preparar las Librerías
+
+### **0.1 Verificar que tienes todo lo necesario**
+Antes de crear la interfaz, necesitamos asegurarnos de tener todas las librerías:
+
+#### **Librería 1: tkinter (ya incluida con Python)**
+- ✅ **Ya tienes**: tkinter viene automáticamente con Python
+- ✅ **No necesitas instalar nada**
+
+#### **Librería 2: mysql-connector-python (necesitas instalarla)**
+- ❓ **Posiblemente no la tienes**: Esta librería se instala por separado
+- 🔧 **Necesitas instalarla**: Sigue el paso siguiente
+
+### **0.2 Instalar mysql-connector-python**
+
+1. **Abre la línea de comandos (cmd)**
+2. **Ejecuta este comando:**
+   ```bash
+   pip install mysql-connector-python
+   ```
+3. **Espera a que termine** (verás mensajes como "Installing...")
+4. **Verifica que se instaló correctamente:**
+   ```bash
+   pip list | findstr mysql
+   ```
+   Deberías ver: `mysql-connector-python   8.x.x`
+
+**Si pip no funciona, prueba:**
+```bash
+python -m pip install mysql-connector-python
+```
+
+### **0.3 Verificación rápida**
+Para asegurarte de que todo está listo, ejecuta esta prueba rápida:
+
+1. **Abre Python**:
+   ```bash
+   python
+   ```
+2. **Prueba importar las librerías**:
+   ```python
+   import tkinter
+   import mysql.connector
+   print("¡Todo listo para el Nivel 3!")
+   exit()
+   ```
+3. **Si no hay errores**, ¡estás listo!
 
 ---
 
@@ -266,23 +317,52 @@ etiqueta_principal.pack(pady=50)
 👋 ¡Programa terminado!
 ```
 
-**Y además se abrirá una VENTANA:**
+**Y además se abrirá una VENTANA con uno de estos 3 posibles estados:**
 
-**Si la conexión funciona:**
+**Estado 1: Si falta la librería mysql-connector-python:**
+- 🟠 **Fondo naranja**
+- 📦 **Texto grande: "LIBRERÍA FALTANTE"**
+- 📝 **Texto pequeño: "mysql-connector-python no está instalado"**
+- 🔄 **Botón "Probar otra vez"** y **Botón "Cerrar"**
+
+**Estado 2: Si la conexión funciona:**
 - 🟢 **Fondo verde**
 - ✅ **Texto grande: "CONECTADO"**
 - 📝 **Texto pequeño: "La conexión a MySQL funciona correctamente"**
-- 🔘 **Botón "Cerrar"**
+- 🔄 **Botón "Probar otra vez"** y **Botón "Cerrar"**
 
-**Si la conexión NO funciona:**
+**Estado 3: Si la conexión NO funciona:**
 - 🔴 **Fondo rojo**
 - ❌ **Texto grande: "NO CONECTADO"**
 - 📝 **Texto pequeño: "No se pudo conectar a MySQL"**
-- 🔘 **Botón "Cerrar"**
+- 🔄 **Botón "Probar otra vez"** y **Botón "Cerrar"**
 
 ---
 
 ## 🛠️ Solución de Problemas
+
+### **🟠 Ventana naranja (LIBRERÍA FALTANTE)**
+**¿Qué significa?** Te falta instalar mysql-connector-python
+**¿Cómo se ve?** Ventana naranja con mensaje "mysql-connector-python no está instalado"
+
+**Solución paso a paso:**
+1. **Cierra la ventana naranja**
+2. **Abre una nueva línea de comandos (cmd)**
+3. **Ejecuta exactamente:**
+   ```bash
+   pip install mysql-connector-python
+   ```
+4. **Espera a que termine** (verás mensajes como "Installing...")
+5. **Vuelve a ejecutar el programa:**
+   ```bash
+   python interfaz_simple.py
+   ```
+6. **Ahora debería aparecer ventana verde o roja** (no naranja)
+
+**Si pip no funciona, prueba:**
+```bash
+python -m pip install mysql-connector-python
+```
 
 ### **❌ No aparece ninguna ventana**
 **Causas posibles:**

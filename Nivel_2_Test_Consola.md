@@ -8,6 +8,7 @@ Crear un programa Python súper simple que pruebe si podemos conectarnos a MySQL
 ## 📋 Prerrequisitos
 - ✅ Nivel 0 completado (Python instalado)
 - ✅ Nivel 1 completado (MySQL funcionando con `mi_primera_db`)
+- 🔧 **IMPORTANTE**: Completar el Paso 0 de este nivel (instalar mysql-connector-python)
 
 ---
 
@@ -22,6 +23,69 @@ Crear un programa que:
 2. Nos diga "SÍ funciona" o "NO funciona"
 3. Muestre la información en la consola
 4. ¡Y ya! Súper simple.
+
+---
+
+## 🔧 Paso 0: Instalar la Librería para MySQL
+
+### **¿Por qué necesitamos instalar algo?**
+Python viene con muchas funciones incluidas, pero para conectarse a MySQL necesita una librería especial llamada `mysql-connector-python`. Es como necesitar un "traductor" para que Python y MySQL puedan hablar entre sí.
+
+### **¿Qué vamos a instalar?**
+- **Nombre**: mysql-connector-python
+- **¿Qué hace?**: Permite que Python se conecte a bases de datos MySQL
+- **¿Está incluida con Python?**: No, hay que instalarla por separado
+
+### **Instalación paso a paso:**
+
+1. **Abre la línea de comandos (cmd)**
+   - Presiona `Windows + R`
+   - Escribe `cmd` y presiona Enter
+
+2. **Ejecuta el comando de instalación:**
+   ```bash
+   pip install mysql-connector-python
+   ```
+
+3. **Espera a que termine**
+   Verás mensajes como:
+   ```
+   Collecting mysql-connector-python
+   Downloading mysql-connector-python-8.x.x
+   Installing collected packages: mysql-connector-python
+   Successfully installed mysql-connector-python-8.x.x
+   ```
+
+4. **Verifica que se instaló correctamente:**
+   ```bash
+   pip list | findstr mysql
+   ```
+   Deberías ver: `mysql-connector-python   8.x.x`
+
+### **Si pip no funciona:**
+
+**Problema común**: "pip no se reconoce como comando"
+**Solución**: Usa este comando alternativo:
+```bash
+python -m pip install mysql-connector-python
+```
+
+### **Prueba rápida:**
+Para verificar que todo funciona:
+
+1. **Abre Python en la consola:**
+   ```bash
+   python
+   ```
+
+2. **Prueba importar la librería:**
+   ```python
+   import mysql.connector
+   print("¡mysql.connector funciona!")
+   exit()
+   ```
+
+3. **Si no hay errores**, ¡estás listo para continuar!
 
 ---
 

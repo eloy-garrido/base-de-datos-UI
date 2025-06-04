@@ -9,6 +9,8 @@
 Al completar este proyecto serás capaz de:
 - ✅ Instalar y configurar Python correctamente
 - ✅ Configurar MySQL usando XAMPP
+- ✅ **Instalar librerías adicionales** con pip (mysql-connector-python)
+- ✅ **Entender qué son las dependencias** y por qué las necesitamos
 - ✅ Crear bases de datos y tablas simples
 - ✅ Escribir programas Python que se conecten a bases de datos
 - ✅ Crear interfaces gráficas básicas
@@ -22,16 +24,26 @@ Al completar este proyecto serás capaz de:
 Este proyecto está dividido en niveles progresivos:
 
 ### **📁 Nivel 0: Preparación del Ecosistema**
-- **Objetivo**: Instalar Python, pip, librerías y editor de código
+- **Tiempo**: 30-45 minutos
+- **Objetivo**: Instalar Python, pip y editor de código
 - **Lo que aprenderás**: Conceptos básicos, diferencias entre tecnologías, configuración del PATH
 
 ### **📁 Nivel 1: Preparación Simple de MySQL** 
+- **Tiempo**: 15-20 minutos  
 - **Objetivo**: Configurar XAMPP y crear una base de datos súper simple
 - **Lo que aprenderás**: MySQL básico, solución de problemas de conexión
 
-### **📁 Nivel 2: Mi Primer Programa**
-- **Objetivo**: Crear un programa Python que se conecte a MySQL
-- **Lo que aprenderás**: Programación básica, conexión a BD, interfaces gráficas
+### **📁 Nivel 2: Test de Conexión en Consola**
+- **Tiempo**: 20-25 minutos
+- **Objetivo**: Crear un programa Python que se conecte a MySQL (solo texto)
+- **Lo que aprenderás**: **Instalar librerías con pip**, programación básica, conexión a BD
+- **Incluye**: Paso 0 para instalar mysql-connector-python
+
+### **📁 Nivel 3: Mini Interfaz Gráfica**
+- **Tiempo**: 25-30 minutos
+- **Objetivo**: Crear una ventana simple que muestre el estado de conexión
+- **Lo que aprenderás**: Interfaces gráficas básicas, manejo de dependencias
+- **Incluye**: Verificación de librerías y manejo de 3 estados (verde/rojo/naranja)
 
 ---
 
@@ -51,6 +63,62 @@ Este proyecto está dividido en niveles progresivos:
 ---
 
 ## ❓ **Preguntas Frecuentes**
+
+### **🟠 Problemas con Librerías Python**
+
+#### **P: Error "No module named 'mysql'" o "ModuleNotFoundError"**
+**R**: 
+- Falta instalar la librería mysql-connector-python
+- **Solución**: `pip install mysql-connector-python`
+- **Si pip no funciona**: `python -m pip install mysql-connector-python`
+- **Importante**: Instala ANTES de ejecutar el código, no después
+
+#### **P: La librería se "instaló" pero sigue dando error**
+**R**:
+- Verifica la instalación: `pip list | findstr mysql`
+- Asegúrate de usar la misma versión de Python: `python --version`
+- Reinicia la línea de comandos después de instalar
+- Si usas múltiples versiones de Python, puede estar instalada en otra versión
+
+#### **P: ¿Qué son las "dependencias" y "librerías"?**
+**R**:
+- **Librería**: Código escrito por otros programadores que podemos usar
+- **Dependencia**: Algo que nuestro programa necesita para funcionar
+- **pip**: Herramienta para instalar librerías de Python
+- **mysql-connector-python**: Librería específica para conectar con MySQL
+
+### **🎨 Problemas de Interfaz**
+
+#### **P: Aparece una ventana naranja que dice "LIBRERÍA FALTANTE"**
+**R**: 
+- 🟠 **Es normal**: Significa que te falta instalar mysql-connector-python
+- **Solución paso a paso**:
+  1. Cierra la ventana naranja
+  2. Abre cmd
+  3. Ejecuta: `pip install mysql-connector-python`
+  4. Vuelve a ejecutar tu programa
+  5. Ahora debería aparecer ventana verde 🟢 o roja 🔴
+
+#### **P: La ventana se abre y se cierra inmediatamente**
+**R**:
+- Es normal, revisa los mensajes en la línea de comandos
+- La ventana se cierra cuando hay un error de conexión
+- Soluciona primero la conexión a MySQL
+
+#### **P: La ventana se ve mal o muy pequeña**
+**R**:
+- Puedes cambiar el tamaño editando esta línea:
+```python
+ventana.geometry("450x350")  # Cambia los números
+```
+
+### **🔴 🟢 🟠 Significado de los Colores de Ventana**
+
+| Color | Significado | Acción |
+|-------|-------------|--------|
+| 🟢 **Verde** | ¡Todo funciona! MySQL conectado | 🎉 ¡Felicitaciones! |
+| 🔴 **Rojo** | MySQL no está disponible | Revisar XAMPP y MySQL |
+| 🟠 **Naranja** | Falta librería Python | Instalar mysql-connector-python |
 
 ### **🔧 Problemas de Instalación**
 
@@ -102,6 +170,16 @@ Este proyecto está dividido en niveles progresivos:
 ### **💻 Problemas de Código**
 
 #### **P: Error "No module named 'mysql'"**
+**R**:
+```bash
+pip install mysql-connector-python
+```
+Si no funciona:
+```bash
+python -m pip install mysql-connector-python
+```
+
+#### **P: Error "No module named 'mysql'" al ejecutar mi programa**
 **R**:
 ```bash
 pip install mysql-connector-python
@@ -327,9 +405,12 @@ Completar este proyecto significa que ahora sabes:
 **Dificultad**: Principiante 🟢  
 
 **Archivos incluidos**:
-- `Nivel_0_Preparacion.md` - Instalación y configuración
-- `Nivel_1_Preparacion_MySQL.md` - Base de datos simple  
-- `Nivel_2_Mi_Primer_Programa.md` - Código Python completo
-- `README.md` - Esta guía general
+- `Nivel_0_Preparacion.md` - Instalación Python y configuración
+- `Nivel_1_Preparacion_MySQL.md` - MySQL y base de datos simple  
+- `Nivel_2_Test_Consola.md` - Programa de consola + instalación de librerías
+- `Nivel_3_Mini_Interfaz.md` - Interfaz gráfica con manejo de estados
+- `test_simple.py` - Código ejecutable del Nivel 2
+- `interfaz_simple.py` - Código ejecutable del Nivel 3
+- `README.md` - Esta guía general y troubleshooting
 
 ¡Éxito en tu aprendizaje! 🚀
