@@ -24,26 +24,25 @@ Al completar este proyecto serás capaz de:
 Este proyecto está dividido en niveles progresivos:
 
 ### **📁 Nivel 0: Preparación del Ecosistema**
-- **Tiempo**: 30-45 minutos
 - **Objetivo**: Instalar Python, pip y editor de código
 - **Lo que aprenderás**: Conceptos básicos, diferencias entre tecnologías, configuración del PATH
 
-### **📁 Nivel 1: Preparación Simple de MySQL** 
-- **Tiempo**: 15-20 minutos  
-- **Objetivo**: Configurar XAMPP y crear una base de datos súper simple
+### **📁 Nivel 1: Preparación de MySQL** 
+- **Objetivo**: Configurar XAMPP y crear una base de datos simple
 - **Lo que aprenderás**: MySQL básico, solución de problemas de conexión
 
 ### **📁 Nivel 2: Test de Conexión en Consola**
-- **Tiempo**: 20-25 minutos
 - **Objetivo**: Crear un programa Python que se conecte a MySQL (solo texto)
-- **Lo que aprenderás**: **Instalar librerías con pip**, programación básica, conexión a BD
-- **Incluye**: Paso 0 para instalar mysql-connector-python
+- **Lo que aprenderás**: Instalar librerías con pip, programación básica, conexión a BD
+- **Incluye**: Instalación de mysql-connector-python
 
-### **📁 Nivel 3: Mini Interfaz Gráfica**
-- **Tiempo**: 25-30 minutos
-- **Objetivo**: Crear una ventana simple que muestre el estado de conexión
-- **Lo que aprenderás**: Interfaces gráficas básicas, manejo de dependencias
-- **Incluye**: Verificación de librerías y manejo de 3 estados (verde/rojo/naranja)
+### **📁 Nivel 3: Mi Primera Ventana**
+- **Objetivo**: Crear una ventana simple que muestre "CONECTADO" o "NO CONECTADO"
+- **Lo que aprenderás**: Ventanas básicas con tkinter, colores, botones simples
+
+### **📁 Nivel 4: Mostrar Datos de la Base**
+- **Objetivo**: Ventana que muestra qué datos hay en la base de datos
+- **Lo que aprenderás**: Consultas SQL desde Python, múltiples elementos visuales, botón refrescar
 
 ---
 
@@ -59,6 +58,7 @@ Este proyecto está dividido en niveles progresivos:
 1. Revisa el **Nivel 0** para verificar tu configuración
 2. Asegúrate de completar el **Nivel 1** correctamente
 3. El **Nivel 2** será tu primera aplicación real
+4. El **Nivel 3** te introducirá a las interfaces gráficas
 
 ---
 
@@ -295,8 +295,19 @@ ventana.geometry("450x350")  # Cambia los números
 ### **Después del Nivel 2:**
 - [ ] Mi programa se ejecuta sin errores
 - [ ] Veo mensajes informativos en cmd
-- [ ] Se abre una ventana verde de éxito
-- [ ] Se muestran los nombres de la base de datos
+- [ ] Veo "🎉 ¡ÉXITO! La conexión funciona perfectamente"
+- [ ] Se muestra la cantidad de personas en la base de datos
+
+### **Después del Nivel 3:**
+- [ ] Se abre una ventana automáticamente
+- [ ] Veo fondo verde con "✅ CONECTADO" (si MySQL funciona)
+- [ ] Puedo cerrar la ventana con el botón "Cerrar"
+
+### **Después del Nivel 4:**
+- [ ] La ventana muestra los datos de la base de datos
+- [ ] Veo la lista de nombres y edades
+- [ ] El botón "Refrescar" actualiza la información
+- [ ] Puedo agregar datos en MySQL y verlos al refrescar
 
 ---
 
@@ -331,25 +342,21 @@ ventana.geometry("450x350")  # Cambia los números
 **Síntoma**: Al escribir `python` en cmd aparece error
 **Causa**: PATH no configurado
 **Solución**: Reinstalar Python marcando "Add Python to PATH"
-**Tiempo**: 10-15 minutos
 
 ### **🟠 Error Medio: "No module named mysql"**
 **Síntoma**: Error al ejecutar el programa Python
 **Causa**: Librería no instalada
 **Solución**: `pip install mysql-connector-python`
-**Tiempo**: 2-3 minutos
 
 ### **🟡 Error Menor: "Can't connect to MySQL"**
 **Síntoma**: Programa se ejecuta pero falla la conexión
 **Causa**: MySQL no está ejecutándose
 **Solución**: Iniciar MySQL en XAMPP
-**Tiempo**: 1 minuto
 
 ### **🔵 Error de Usuario: "Database doesn't exist"**
 **Síntoma**: Error específico de base de datos
 **Causa**: No se completó el Nivel 1
 **Solución**: Crear la base de datos en MySQL Workbench
-**Tiempo**: 5 minutos
 
 ---
 
@@ -401,16 +408,17 @@ Completar este proyecto significa que ahora sabes:
 **Fecha**: Junio 2025  
 **Dirigido a**: Estudiantes principiantes de programación  
 **Tecnologías**: Python 3.11+, MySQL 8.0+, Tkinter, XAMPP  
-**Tiempo total estimado**: 2-3 horas  
 **Dificultad**: Principiante 🟢  
 
 **Archivos incluidos**:
 - `Nivel_0_Preparacion.md` - Instalación Python y configuración
 - `Nivel_1_Preparacion_MySQL.md` - MySQL y base de datos simple  
-- `Nivel_2_Test_Consola.md` - Programa de consola + instalación de librerías
-- `Nivel_3_Mini_Interfaz.md` - Interfaz gráfica con manejo de estados
+- `Nivel_2_Test_Consola.md` - Programa de consola
+- `Nivel_3_Mi_Primera_Ventana.md` - Interfaz gráfica básica
+- `Nivel_4_Mostrar_Datos.md` - Interfaz con datos de la base
 - `test_simple.py` - Código ejecutable del Nivel 2
-- `interfaz_simple.py` - Código ejecutable del Nivel 3
-- `README.md` - Esta guía general y troubleshooting
+- `ventana_simple.py` - Código ejecutable del Nivel 3
+- `mostrar_datos.py` - Código ejecutable del Nivel 4
+- `README.md` - Esta guía general
 
 ¡Éxito en tu aprendizaje! 🚀
