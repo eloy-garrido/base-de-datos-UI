@@ -60,7 +60,7 @@ try:
         if personas_mayores:
             print(f"🔍 Encontradas {len(personas_mayores)} personas mayores de 22 años:")
             for persona in personas_mayores:
-                # Asumiendo que las columnas son nombre, apellido, edad en ese orden
+                # Asumiendo que las columnas son nombre, edad en ese orden
                 nombre, edad_persona = persona
                 print(f"  - {nombre}, Edad: {edad_persona}")
         else:
