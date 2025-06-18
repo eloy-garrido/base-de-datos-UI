@@ -410,15 +410,4 @@ Completar este proyecto significa que ahora sabes:
 **Tecnologías**: Python 3.11+, MySQL 8.0+, Tkinter, XAMPP  
 **Dificultad**: Principiante 🟢  
 
-**Archivos incluidos**:
-- `Nivel_0_Preparacion.md` - Instalación Python y configuración
-- `Nivel_1_Preparacion_MySQL.md` - MySQL y base de datos simple  
-- `Nivel_2_Test_Consola.md` - Programa de consola
-- `Nivel_3_Mi_Primera_Ventana.md` - Interfaz gráfica básica
-- `Nivel_4_Mostrar_Datos.md` - Interfaz con datos de la base
-- `test_simple.py` - Código ejecutable del Nivel 2
-- `ventana_simple.py` - Código ejecutable del Nivel 3
-- `mostrar_datos.py` - Código ejecutable del Nivel 4
-- `README.md` - Esta guía general
-
 ¡Éxito en tu aprendizaje! 🚀
